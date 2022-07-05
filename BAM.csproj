@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ABE5815D-8401-463F-AA7F-130403101B0E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BAM</RootNamespace>
+    <AssemblyName>BAM</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminExam.Designer.cs">
+      <DependentUpon>AdminExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\EditOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\EditOrder.Designer.cs">
+      <DependentUpon>EditOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\NewClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\NewClient.Designer.cs">
+      <DependentUpon>NewClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\NewProvider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\NewProvider.Designer.cs">
+      <DependentUpon>NewProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\NewTovar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\NewTovar.Designer.cs">
+      <DependentUpon>NewTovar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\RegWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\RegWork.Designer.cs">
+      <DependentUpon>RegWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Supply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Supply.Designer.cs">
+      <DependentUpon>Supply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\TovarInfoAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\TovarInfoAdmin.Designer.cs">
+      <DependentUpon>TovarInfoAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\AutoClass.cs" />
+    <Compile Include="Class\DayZvit.cs" />
+    <Compile Include="Class\Pay.cs" />
+    <Compile Include="Class\Photo.cs" />
+    <Compile Include="Class\StaticticClass.cs" />
+    <Compile Include="HelloForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelloForm.Designer.cs">
+      <DependentUpon>HelloForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paymaster_Form\AddOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paymaster_Form\AddOrder.Designer.cs">
+      <DependentUpon>AddOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Paymaster_Form\CopyCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paymaster_Form\CopyCheck.Designer.cs">
+      <DependentUpon>CopyCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paymaster_Form\PaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paymaster_Form\PaymentForm.Designer.cs">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paymaster_Form\ReturnOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paymaster_Form\ReturnOrder.Designer.cs">
+      <DependentUpon>ReturnOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paymaster_Form\SelectTovar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paymaster_Form\SelectTovar.Designer.cs">
+      <DependentUpon>SelectTovar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paymaster_Form\TovarInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paymaster_Form\TovarInfo.Designer.cs">
+      <DependentUpon>TovarInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Main_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Main_Admin.Designer.cs">
+      <DependentUpon>Main_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Paymaster_Form\TovarCountEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paymaster_Form\TovarCountEdit.Designer.cs">
+      <DependentUpon>TovarCountEdit.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminExam.resx">
+      <DependentUpon>AdminExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\EditOrder.resx">
+      <DependentUpon>EditOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\NewClient.resx">
+      <DependentUpon>NewClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\NewProvider.resx">
+      <DependentUpon>NewProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\NewTovar.resx">
+      <DependentUpon>NewTovar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\RegWork.resx">
+      <DependentUpon>RegWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\Supply.resx">
+      <DependentUpon>Supply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\TovarInfoAdmin.resx">
+      <DependentUpon>TovarInfoAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelloForm.resx">
+      <DependentUpon>HelloForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paymaster_Form\AddOrder.resx">
+      <DependentUpon>AddOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\Main_Admin.resx">
+      <DependentUpon>Main_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paymaster_Form\CopyCheck.resx">
+      <DependentUpon>CopyCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paymaster_Form\PaymentForm.resx">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paymaster_Form\ReturnOrder.resx">
+      <DependentUpon>ReturnOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paymaster_Form\SelectTovar.resx">
+      <DependentUpon>SelectTovar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paymaster_Form\TovarInfo.resx">
+      <DependentUpon>TovarInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Paymaster_Form\TovarCountEdit.resx">
+      <DependentUpon>TovarCountEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top_phone3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\onebit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infinity_icon_144274.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoPhoto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mi-Band 4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copyyy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelll.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mastercard.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-order-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-order-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-order-642.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\крест.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moneyhand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Снимок экрана %28103%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Снимок экрана %28103%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-человек-с-очками-корзина-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-человек-с-очками-корзина-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Снимок экрана %28105%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\фон арм.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-человек-с-очками-корзина-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-человек-с-очками-корзина-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\premium-icon-testimonials-671822.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\фон арм1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_2022-05-26_10-16-33.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486485557-add-create-new-more-plus_81188.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen_edit_modify_pencil_icon_181536.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-мусор-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\premium-icon-statistics-4064936.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistic client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistik worker.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
